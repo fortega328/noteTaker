@@ -3,15 +3,17 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
-
+let notes = [];
+let count = 0;
 const fs = require('fs')
 const { isObject } = require('util')
 
 var rootObj = {root: __dirname +'/public'};
-let notes = [];
-let count = 0;
-
-app.use(express.urlencoded({extended:true}))
+// let notes = [];
+// let count = 0;
+app.use(bodyParser.urlencoded({ extended: true}))
+app.use(bodyParser.json());
+// app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, '/public')));
 app.get('/', (req,res)=> res.sendFile('/index.html',rootObj));
 app.get('/notes',(req,res)=>res.sendFile('/notes.html',rootObj));
@@ -48,7 +50,7 @@ function createNoteObject(data) {
     let obj = {title: data.title,
     text: data.text,
     complete: false,
-    hidden: false}
+    hidden: false,}
 return obj
 }
 
@@ -65,8 +67,8 @@ function saveJSON(jsonData) {
 }
 
 function deleteNoteFromJSON(id) {
-    let json = getJson();
-    json(id).hide = true
+    let json = getJson(id);
+    json(id).hide = true;
     saveJSON(json);
 }
 
