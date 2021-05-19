@@ -31,5 +31,5 @@ If you have further questions you can contact us at forteag328@gmail.com.
 
 Github: fortega328
 
-![Home](assets/home.png)
-![Notes](assets/notes.png)
+![Home](public/assets/home.png)
+![Notes](public/assets/notes.png)
