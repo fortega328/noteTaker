@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/fortega328/noteTaker/issues"
   },
-  "homepage": "https://github.com/fortega328/noteTaker#readme",
+  "homepage": "https://github.com/fortega328/noteTaker/public/index.html",
   "dependencies": {
     "body-parser": "^1.19.0",
     "bootstrap": "^5.0.1",
