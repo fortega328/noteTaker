@@ -15,7 +15,7 @@
 ## Description
 This is an app made with express to take notes and display them to user.  Its simple to use. Still missing the delete functionality. Be sure to install all dependencies.
 
-Demo Video: 
+Demo Video: https://youtu.be/jVNl6N8nbQI
 
 ## Installation Instructions
 run npm i from CLI
